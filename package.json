@@ -1,0 +1,26 @@
+{
+  "name": "diplim-markdown-parser",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "description": "Markdown Parser to Diplim Project",
+  "author": "gleb-bread",
+  "license": "MIT",
+  "types": "types/index.d.ts",
+  "files": [
+    "dist/**/*",
+    "types/**/*"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "test": "vitest",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    }
+  }
+}
